@@ -91,9 +91,42 @@ a {
   </div>
 </div>
 
+<div class="post">
+  <div class="post-title">
+    첫 번째 글 제목
+    <span>›</span>
+  </div>
+  <div class="post-content">
+    첫 번째 글 내용입니다.
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-title">
+    두 번째 글 제목
+    <span>›</span>
+  </div>
+  <div class="post-content">
+    두 번째 글 내용입니다.
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-title">
+    세 번째 글 제목
+    <span>›</span>
+  </div>
+  <div class="post-content">
+    세 번째 글 내용입니다.
+  </div>
+</div>
+
+  
 <script>
-document.querySelector(".post-title").addEventListener("click", function() {
-  document.querySelector(".post").classList.toggle("active");
+document.querySelectorAll(".post-title").forEach(title => {
+  title.addEventListener("click", function() {
+    this.parentElement.classList.toggle("active");
+  });
 });
 </script>
 
