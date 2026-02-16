@@ -12,14 +12,81 @@
     }
   </script>
 </head>
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 24px;
+  background: #fafafa;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+  font-size: 14px;
+}
+
+.post {
+  margin-top: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.post-title {
+  font-size: 28px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-title span {
+  color: #ff4d00;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.post-content {
+  margin-top: 24px;
+  font-size: 18px;
+  color: #444;
+  display: none;
+}
+
+.post.active .post-content {
+  display: block;
+}
+
+.post.active .post-title span {
+  transform: rotate(90deg);
+}
+</style>
+</head>
+
 <body>
-  <h1>명절에 도망치고 싶은 여자들의</h1>
-  <p>이 페이지는 참가자만 볼 수 있습니다.</p>
 
-  <h2>공지사항</h2>
-  <p>.</p>
+<a href="index.html">← 목록으로</a>
 
-  <h2>.</h2>
-  <p>.</p>
+<div class="post">
+  <div class="post-title">
+    글 제목은 예시
+    <span>›</span>
+  </div>
+  <div class="post-content">
+    글 내용은 예시입니다.
+  </div>
+</div>
+
+<script>
+document.querySelector(".post-title").addEventListener("click", function() {
+  document.querySelector(".post").classList.toggle("active");
+});
+</script>
+
 </body>
+
 </html>
